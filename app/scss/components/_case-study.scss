@@ -1,0 +1,62 @@
+.case-study {
+  max-width: $wrapper-width + 80px;
+
+  padding-left: 40px;
+  padding-right: 40px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  &__section {
+    padding: 25px;
+
+    &:first-child {
+      min-height: 100vh;
+      background-color: #FF6700;
+    }
+
+    &:nth-child(2) {
+      background-color: #98C81F;
+    }
+
+    &:nth-child(3) {
+      background-color: #24BE51;
+    }
+
+    &:nth-child(4) {
+      background-color: #2EA5F3;
+    }
+
+    &:nth-child(5) {
+      background-color: #FF5757;
+    }
+  }
+
+  @include for-phone-only {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &--shortly-fixed {
+    @include for-phone-only {
+      width: auto;
+    }
+
+    @include for-tablet-portrait-up {
+      width: auto;
+    }
+
+    @include for-desktop-up {
+      max-width: $wrapper-width + 80px;
+    }
+  }
+
+  &--wide {
+    max-width: $big-wrapper-width ;
+
+    @include for-phone-only {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

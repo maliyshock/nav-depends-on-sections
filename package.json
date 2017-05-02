@@ -1,0 +1,28 @@
+{
+  "name": "Aerostat_full",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-connect": "^5.0.0",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-useref": "^3.1.2",
+    "opn": "^4.0.2",
+    "run-sequence": "^1.2.2",
+    "wiredep": "^4.0.0",
+    "yargs": "^6.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

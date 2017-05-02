@@ -1,0 +1,103 @@
+.float-navigation {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  background-color: #fff;
+
+  transition: transform 0.3s linear;
+
+  visibility: hidden;
+
+  &__logo {
+    display: inline-block;
+
+    vertical-align: middle;
+  }
+
+  &__inner {
+    white-space: nowrap;
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+    overflow-x: auto;
+  }
+
+  &__list {
+    @include reset-ul;
+
+    display: inline-block;
+    position: relative;
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+
+    padding-left: 50px;
+  }
+
+  &__link {
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    color: $lightenGray;
+    font-weight: 900;
+
+    .active &{
+      border-top:1px solid $gray2;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+
+    align-self: center;
+
+    padding-right: 25px;
+
+    border-top:1px solid transparent;
+
+    font-size: 11px;
+
+    & + & {
+      padding-left: 25px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &.active {
+
+      //because of normalize that sets color to a
+      // todo - need to find out how to change oreder of linked styles
+      & .float-navigation__link {
+        color: $gray2;
+      }
+    }
+  }
+}
+
+.magic-line {
+  position: absolute;
+  top: 0;
+  background-color: black;
+  height: 1px;
+}
+
+.page__header {
+  transition: transform 0.3s linear;
+
+  &--hidden {
+    transform: translateY(-80px);
+  }
+}
+
+.float-navigation--hidden {
+  transform: translateY(-157px);
+}
+

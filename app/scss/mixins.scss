@@ -1,0 +1,171 @@
+
+@mixin reset-link()
+{
+  line-height: normal;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid;
+}
+
+@mixin pseudo-elem()
+{
+  position: absolute;
+
+  display: block;
+
+  content: '';
+}
+
+@mixin inline-block()
+{
+  display: inline-block;
+  float: none;
+
+  vertical-align: middle;
+}
+
+
+@mixin tri-r($color, $width, $height)
+{
+  border-top: $height + px solid transparent;
+  border-bottom: $height / 2 +px solid transparent;
+  border-left: $width + 0 solid $color;
+}
+
+@mixin tri-l($color, $width, $height)
+{
+  border-top: $height + px solid transparent;
+  border-right: $width + 0 solid $color;
+  border-bottom: $height / 2 + px solid transparent;
+}
+
+@mixin tri-t($color, $width, $height)
+{
+  border-right: $width + px solid transparent;
+  border-bottom: $height + 0 solid $color;
+  border-left: $width + px solid transparent;
+}
+
+@mixin tri-b($color, $width, $height)
+{
+  border-top: $height + 0 solid $color;
+  border-right: $width + px solid transparent;
+  border-left: $width + px solid transparent;
+}
+
+@mixin reset-ul
+{
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+@mixin resetInput
+{
+  border: none;
+  &:focus
+  {
+    outline: none;
+  }
+
+  &:required,
+  &:invalid
+  {
+    box-shadow: none;
+  }
+}
+
+@mixin resetButton
+{
+  padding: 0;
+
+  cursor: pointer;
+  text-align: center;
+
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+
+  &:focus
+  {
+    outline: none;
+  }
+}
+
+@mixin makeMiddle
+{
+  font-size: 0;
+  &:after
+  {
+    width: 0;
+    height: 100%;
+
+    content: '';
+
+    @include inlined;
+  }
+}
+
+@mixin placeholder($color)
+{
+  &::-webkit-input-placeholder
+  {
+    color: $color;
+  }
+
+  &:-moz-placeholder
+  {
+    /* Firefox 18- */
+    color: $color;
+  }
+
+  &::-moz-placeholder
+  {
+    /* Firefox 19+ */
+    color: $color;
+  }
+
+  &:-ms-input-placeholder
+  {
+    color: $color;
+  }
+}
+
+
+@mixin for-phone-only
+{
+  @media (max-width: $mq-small)
+  {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up
+{
+  @media (min-width: $mq-med)
+  {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up
+{
+  @media (min-width: $mq-med-large)
+  {
+    @content;
+  }
+}
+@mixin for-desktop-up
+{
+  @media (min-width: $mq-large)
+  {
+    @content;
+  }
+}
+@mixin for-big-desktop-up
+{
+  @media (min-width: $mq-extra-large)
+  {
+    @content;
+  }
+}
