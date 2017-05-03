@@ -23,11 +23,7 @@ $('document').ready(function(){
         sectionIndex: '',
 
         isFirstScreen: function (scrollPosition) {
-            if (scrollPosition > this.windowHeight) {
-                return false;
-            } else {
-                return true;
-            }
+            return !(scrollPosition > this.windowHeight);
         },
 
         getNavigationPosition: function () {
@@ -45,11 +41,7 @@ $('document').ready(function(){
         },
 
         isMobile: function () {
-            if(window.orientation !== undefined || this.$window.width() < 660) {
-                return true;
-            } else {
-                return false;
-            }
+            return (window.orientation !== undefined || this.$window.width() < 660) ;
         },
 
         makeItemActive: function (obj) {
