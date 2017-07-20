@@ -35,7 +35,7 @@ gulp.task('connect', function() {
         // options.connectProd
         options.connectApp
     );
-    opn('http://localhost:8888/'+options.app+'/grid.html');
+    opn('http://localhost:8888/'+options.app+'/index.html');
 });
 
 // как вызвана таска html, вызываем релоад
